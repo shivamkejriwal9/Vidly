@@ -120,8 +120,8 @@ class Movies extends Component {
               New Movie
             </Link>
           )}
-
-          <p>Showing {totalCount} movies in the database.</p>
+          {count === 0 && <p>There are no movies in the database.</p>}
+          {count !== 0 && <p>Showing {totalCount} movies in the database.</p>}
           {count !== 0 && (
             <SearchBox value={searchQuery} onChange={this.handleSearch} />
           )}
